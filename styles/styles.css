@@ -736,4 +736,13 @@ h4, .h4 {
   }
 }
 
+.services__list:not(:last-child) {
+  margin-bottom: 100px;
+}
+@media (max-width: 767px) {
+  .services__list:not(:last-child) {
+    margin-bottom: 70px;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */
