@@ -745,6 +745,78 @@ h4, .h4 {
   transition-duration: var(--transition-duration);
 }
 
+.field {
+  --fieldInputHeight: var(--input-height);
+  --fieldInputTextColor: var(--color-dark);
+  --fieldInputBgColor: var(--color-light);
+  --fieldInputBorderColor: var(--color-dark);
+  --fieldInputPlaceholderColor: var(--color-dark-alt);
+  --fieldInputHoverBgColor: var(--color-accent);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  row-gap: 5px;
+}
+@media (max-width: 767px) {
+  .field {
+    row-gap: 10px;
+  }
+}
+.field--big-height {
+  --fieldInputHeight: var(--button-height);
+}
+.field--dark-bg {
+  --fieldInputTextColor: var(--color-accent);
+  --fieldInputBgColor: var(--color-dark-alt);
+  --fieldInputBorderColor: var(--color-light);
+  --fieldInputPlaceholderColor: var(--color-light);
+  --fieldInputHoverBgColor: var(--color-dark);
+}
+.field__label {
+  font-size: clamp(14px, 1.1111111111vw, 16px);
+}
+.field__input {
+  width: 100%;
+  height: var(--fieldInputHeight);
+  padding-inline: 30px;
+  color: var(--fieldInputTextColor);
+  background-color: var(--fieldInputBgColor);
+  border: 1px solid var(--fieldInputBorderColor);
+  border-radius: var(--border-radius);
+}
+@media (hover: hover) {
+  .field__input:hover {
+    background-color: var(--fieldInputHoverBgColor);
+  }
+}
+@media (hover: none) {
+  .field__input:active {
+    background-color: var(--fieldInputHoverBgColor);
+  }
+}
+@media (max-width: 767px) {
+  .field__input {
+    padding-inline: 20px;
+  }
+}
+.field__input:focus {
+  border-color: var(--color-accent);
+  outline: none;
+}
+.field__input::placeholder {
+  color: var(--fieldInputPlaceholderColor);
+}
+.field__input--textarea {
+  height: 190px;
+  padding-block: 18px;
+  resize: none;
+}
+@media (max-width: 767px) {
+  .field__input--textarea {
+    height: 132px;
+  }
+}
+
 .header {
   padding-top: 60px;
 }
