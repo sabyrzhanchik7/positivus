@@ -74,8 +74,8 @@
         column-gap: 0;
         width: calc(100vw + var(--heroPartnersWidthOffsetX) * 2);
         margin-left: calc(
-          (var(--heroPartnersWidthOffsetX) + var(--container-padding-x))
-          * -1
+                (var(--heroPartnersWidthOffsetX) + var(--container-padding-x))
+                * -1
         );
       }
     }
