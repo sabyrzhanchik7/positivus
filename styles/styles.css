@@ -446,6 +446,15 @@ h4, .h4 {
   min-height: 80vh;
 }
 
+.puddle-bg {
+  padding-inline: 7px;
+  background-color: var(--color-accent);
+  border-radius: var(--border-radius-small);
+}
+.puddle-bg--light {
+  background-color: var(--color-light);
+}
+
 .service-card {
   display: flex;
   justify-content: space-between;
