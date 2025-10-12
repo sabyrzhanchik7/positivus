@@ -697,6 +697,11 @@ h4, .h4 {
   color: var(--color-accent);
 }
 
+.radios {
+  display: flex;
+  column-gap: 35px;
+}
+
 .header {
   padding-top: 60px;
 }
