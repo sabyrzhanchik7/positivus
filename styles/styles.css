@@ -669,6 +669,34 @@ h4, .h4 {
   color: var(--color-accent);
 }
 
+.pagination__list {
+  display: flex;
+}
+.pagination__button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  aspect-ratio: 1;
+  color: var(--color-light);
+}
+@media (hover: hover) {
+  .pagination__button:hover {
+    color: var(--color-accent);
+  }
+}
+@media (hover: none) {
+  .pagination__button:active {
+    color: var(--color-accent);
+  }
+}
+.pagination__button.is-current {
+  color: var(--color-accent);
+}
+
 .header {
   padding-top: 60px;
 }
