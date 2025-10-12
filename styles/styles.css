@@ -619,6 +619,56 @@ h4, .h4 {
   }
 }
 
+.review-card {
+  --reviewCardCornerWidth: 40px;
+  --reviewCardCornerOffsetLeft: 52px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 48px;
+}
+@media (max-width: 767px) {
+  .review-card {
+    --reviewCardCornerWidth: 32px;
+    --reviewCardCornerOffsetLeft: 46px;
+    row-gap: 44px;
+  }
+}
+.review-card__body {
+  position: relative;
+  padding: 48px var(--reviewCardCornerOffsetLeft) 52px;
+  border: 1px solid var(--color-accent);
+  border-radius: var(--border-radius-large);
+}
+@media (max-width: 767px) {
+  .review-card__body {
+    padding: 30px;
+  }
+}
+.review-card__body::after {
+  width: var(--reviewCardCornerWidth);
+  aspect-ratio: 1;
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: var(--reviewCardCornerOffsetLeft);
+  background-color: var(--color-dark);
+  border: inherit;
+  rotate: 45deg;
+  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+  translate: 0 -50%;
+}
+.review-card__footer {
+  display: flex;
+  flex-direction: column;
+  padding-left: calc(var(--reviewCardCornerOffsetLeft) + var(--reviewCardCornerWidth) / 2);
+}
+.review-card__name, .review-card__company {
+  font-style: normal;
+}
+.review-card__name {
+  color: var(--color-accent);
+}
+
 .header {
   padding-top: 60px;
 }
