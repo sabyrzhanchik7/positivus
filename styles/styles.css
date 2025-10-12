@@ -1103,4 +1103,19 @@ h4, .h4 {
   border-top: var(--border);
 }
 
+.team {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+.team__button {
+  align-self: end;
+  min-width: 269px;
+}
+@media (max-width: 480px) {
+  .team__button {
+    width: 100%;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */
