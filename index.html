@@ -9,6 +9,79 @@
     <link rel="stylesheet" href="./styles/styles.css">
   </head>
   <body>
+    <header class="header">
+      <div class="header__inner container">
+        <a class="header__logo logo" href="/">
+          <img
+            class="logo__image"
+            src="./assets/images/logo/logo.svg"
+            alt="Positivus"
+            width="220" height="36" loading="lazy"
+          />
+        </a>
+        <nav class="header__menu hidden-mobile">
+          <ul class="header__menu-list">
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="/">About us</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="/">Services</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="/">Use Cases</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="/">Pricing</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="/">Blog</a>
+            </li>
+          </ul>
+        </nav>
+        <button
+          class="header__button button button--transparent hidden-mobile"
+          type="button"
+        >
+          Request a quote
+        </button>
+        <button
+          class="header__burger-button burger-button visible-mobile"
+          type="button"
+          onclick="mobileOverlay.showModal()"
+        >
+          <span class="visually-hidden">Open navigation menu</span>
+        </button>
+      </div>
+    </header>
 
+    <dialog class="mobile-overlay visible-mobile" id="mobileOverlay">
+      <form class="mobile-overlay__close-button-wrapper" method="dialog">
+        <button
+          class="mobile-overlay__close-button cross-button"
+          type="submit"
+        >
+          <span class="visually-hidden">Close navigation menu</span>
+        </button>
+      </form>
+      <div class="mobile-overlay__body">
+        <ul class="mobile-overlay__list">
+          <li class="mobile-overlay__item">
+            <a class="mobile-overlay__link" href="/">About us</a>
+          </li>
+          <li class="mobile-overlay__item">
+            <a class="mobile-overlay__link" href="/">Services</a>
+          </li>
+          <li class="mobile-overlay__item">
+            <a class="mobile-overlay__link" href="/">Use Cases</a>
+          </li>
+          <li class="mobile-overlay__item">
+            <a class="mobile-overlay__link" href="/">Pricing</a>
+          </li>
+          <li class="mobile-overlay__item">
+            <a class="mobile-overlay__link" href="/">Blog</a>
+          </li>
+        </ul>
+      </div>
+    </dialog>
   </body>
 </html>
