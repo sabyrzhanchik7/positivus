@@ -1,4 +1,4 @@
-# 🌿 Positivus
+# 🌿 Positivus 
 
 **Positivus** is a modern landing page concept focused on positivity, growth, and personal well-being.  
 It features a clean, minimal, and responsive layout designed to inspire and engage users.
